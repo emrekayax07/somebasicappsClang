@@ -18,7 +18,7 @@
 
 	  srand(time(NULL));
 
-	  
+	 
 
 	  int randomNumber = (rand() % 3) + 1;
 
@@ -56,9 +56,9 @@
 
 	 
 
-	// function to get user input
-
 	// take user input and return it
+
+	// function to get user input
 
 	char getUserInput() {
 
@@ -82,7 +82,7 @@
 
 	 
 
-	// return either 'w', 'l' or 'd' for win, loss or draw
+	// return either 'w', 'l' or 'd' for win, loss and draw
 
 	char getResult(char userPick, char computerPick) {
 
@@ -98,7 +98,7 @@
 
 	 
 
-	  // conditions for user to win
+	  // condition for user to win
 
 	  else if (userPick == 'p' && computerPick == 'r') {
 
@@ -140,7 +140,25 @@
 
 	  char computerPick = getComputersChoice();
 
-	  char userPick = getUserInput();
+	 
+
+	  // get input until user enters 'r', 'p' or 's'
+
+	  char userPick;
+
+	  while (1) {
+
+	    userPick = getUserInput();
+
+	    if (userPick == 'r' || userPick == 'p' || userPick == 's') {
+
+	      break;
+
+	    }
+
+	  }
+
+	 
 
 	 
 
